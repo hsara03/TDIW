@@ -1,0 +1,199 @@
+body {
+    background-image: url("../Image/fondo.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+header {
+    width: 100%;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0);
+    color: #ffffff;
+}
+
+nav {
+    width: 100%; /* Cambio importante */
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+a {
+    font-size: 18px;
+    color: #ffffff;
+}
+
+.explore {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #000000;
+    color: #ffffff;
+    font-family: sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    margin-right: -400px; /* Esto mantiene a 'search' en su lugar */
+    position: relative; /* Es necesario para que z-index funcione */
+    z-index: 10; /* Este número asegura que el botón esté por encima del rectángulo */
+}
+
+
+.logo img {
+    width: auto;
+    max-width: 80px; /* Ajusta esto para cambiar el tamaño del logo */
+}
+
+.logo {
+    margin-top: 20px;
+}
+
+.side-rectangle {
+    position: fixed;
+    top: 0;
+    left: -300px;
+    width: 0;
+    height: 100vh;
+    background-color: #000;
+    overflow: hidden;
+    transition: width 0.5s ease-out, left 0.5s ease-out;
+}
+
+search {
+    display: flex;
+    align-items: center;
+}
+
+search input[type="search"] {
+    padding: 5px;
+    font-size: 18px;
+    margin: 20%; /* Asegura que no haya márgenes adicionales */
+}
+
+.intro-container {
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro con 70% de opacidad */
+    padding: 20px; /* Espacio interior alrededor del texto */
+    border-radius: 10px; /* Bordes redondeados */
+    max-width: 800px; /* Ancho máximo para que el texto no sea demasiado ancho en pantallas grandes */
+    margin: 20px auto; /* Centra el contenedor en la pantalla y añade un margen en la parte superior e inferior */
+    color: #FFF; /* Color de texto blanco */
+}
+
+.intro-container h1 {
+    font-size: 2em; /* Tamaño de fuente más grande para el título */
+    margin-bottom: 20px; /* Espacio entre el título y el párrafo */
+}
+
+.intro-container p {
+    font-size: 1.2em; /* Tamaño de fuente para el párrafo */
+    line-height: 1.5; /* Espacio entre líneas del párrafo */
+}
+
+.side-rectangle ul {
+    list-style: none; /* quitar bullets de la lista */
+    padding: 20px; /* padding alrededor de la lista */
+    margin: 50px 0 0 0; /* quitar márgenes */
+}
+
+.side-rectangle li {
+    margin-bottom: 15px; /* espacio entre los ítems */
+}
+
+.side-rectangle a {
+    font-size: 1.2em; /* tamaño del texto */
+    color: #FFF; /* color blanco */
+    text-decoration: none; /* quitar subrayado */
+    transition: color 0.3s; /* animación suave de color */
+}
+
+.side-rectangle a:hover {
+    color: #FFD700; /* color dorado al pasar el ratón */
+}
+
+.right-section {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espacio entre el logo y los enlaces */
+}
+
+.auth-links {
+    display: flex;
+    gap: 15px; /* espacio entre enlaces */
+}
+
+.auth-links a {
+    background-color: rgba(0, 0, 0, 0.7); /* fondo negro con 70% de opacidad */
+    padding: 5px 10px; /* espacio interior */
+    border-radius: 5px; /* bordes redondeados */
+    text-decoration: none;
+    transition: background-color 0.3s ease; /* efecto suave al pasar el cursor */
+}
+
+.auth-links a:hover {
+    background-color: rgba(0, 0, 0, 0.9); /* fondo negro más oscuro al pasar el cursor */
+}
+
+
+
+.telescope {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    background-color: rgba(0, 0, 0, 0.7); /* fondo negro con 70% de opacidad */
+    padding: 20px; /* espacio interior */
+    border-radius: 10px; /* bordes redondeados */
+}
+
+.telescope img {
+    width: auto;
+    max-width: 200px;
+    margin-right: 20px;
+}
+
+.description {
+    flex: 1;
+    color: #ffffff; /* texto blanco */
+}
+
+
+/* Estilos generales para los formularios */
+form {
+    background-color: rgba(0, 0, 0, 0.7); /* Un fondo negro con 70% de opacidad para que contraste con el fondo oscuro */
+    padding: 30px; /* Espacio interior alrededor del contenido del formulario */
+    border-radius: 10px; /* Bordes redondeados */
+    max-width: 400px; /* Ancho máximo del formulario */
+    margin: 50px auto; /* Centrar el formulario en la pantalla y añadir un margen superior e inferior */
+}
+
+form label {
+    color: #ffffff; /* Color blanco para las etiquetas */
+    display: block; /* Hacer las etiquetas de tipo bloque para que ocupen toda la línea */
+    margin-bottom: 10px; /* Espacio después de cada etiqueta */
+}
+
+form input {
+    width: 100%; /* Que los campos de input ocupen todo el ancho posible */
+    padding: 10px; /* Espacio interior para los campos de input */
+    margin-bottom: 20px; /* Espacio después de cada campo de input */
+    border-radius: 5px; /* Bordes redondeados para los campos de input */
+    border: 1px solid #ffffff; /* Bordes blancos para los campos de input */
+    background-color: rgba(255, 255, 255, 0.2); /* Un ligero fondo blanco para los campos de input */
+    color: #ffffff; /* Texto blanco para los campos de input */
+}
+
+form input[type="submit"] {
+    cursor: pointer; /* Cursor de mano cuando pasas por encima del botón */
+    background-color: #FFD700; /* Color dorado para el botón */
+    color: #000000; /* Texto negro para el botón */
+    border: none; /* Quitar los bordes del botón */
+    transition: background-color 0.3s ease; /* Efecto suave al cambiar el color de fondo */
+}
+
+form input[type="submit"]:hover {
+    background-color: #bfa100; /* Color dorado oscuro cuando pasas por encima del botón */
+}
