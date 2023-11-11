@@ -1,7 +1,9 @@
 <?php
+/*
 /**
  * @return array
  */
+/*
 function getCategories(): array
 {
     #$conn = \connectaDB::conn();
@@ -24,6 +26,7 @@ function getCategories(): array
  * @return array
  */
 
+/*
 function getCategoryById(int $categoryId): array
 {
     $conn = \connectaDB::con();
@@ -53,3 +56,32 @@ function getProductById(int $productId): array
     );
     return $stmt -> fetch(PDO::FETCH_ASSOC);
 }
+*/
+
+
+require_once 'connectaDB.php';
+
+function getCategories()
+{
+    $conn = Database::getInstance();
+    $stmt = $conn->prepare("SELECT * FROM categories");
+    $stmt->execute();
+    return $stmt->fetchAll();
+}
+
+function getCategoryById($categoryId)
+{
+    $conn = Database::getInstance();
+    $stmt = $conn->prepare("SELECT id, name FROM categories WHERE id = :categoryId");
+    $stmt->execute(['categoryId' => $categoryId]);
+    return $stmt->fetch();
+}
+
+function getProductById($productId) {
+    $conn = Database::getInstance();
+    $stmt = $conn->prepare("SELECT id, title, author, description FROM product WHERE id = :productId");
+    $stmt->execute(['productId' => $productId]);
+    return $stmt->fetch();
+}
+
+
