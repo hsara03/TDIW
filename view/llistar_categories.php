@@ -1,7 +1,7 @@
 <?php
 require_once __DIR__.'/../model/connectaDB.php';
 require_once __DIR__.'/../model/categories.php';
-$categories = getCategories();
+
 ?>
 
 <h1> Llistat de categories </h1>

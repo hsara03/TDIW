@@ -14,6 +14,9 @@ switch ($accio) {
     case 'login':
         include __DIR__ . '/controller/login.php';
         break;
+    case 'category':
+        require __DIR__."/view/resources/resource_category.php";
+        break;
     case 'logout':
         $_SESSION = array();
         session_destroy();
