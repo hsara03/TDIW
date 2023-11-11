@@ -2,6 +2,17 @@
 // Start the session at the beginning of the script
 session_start();
 
+?>
+<div class="right-section">
+    <a href="#" class="logo"><img src="../Image/logo.png" alt="Logo"></a>
+    <div class="auth-links">
+        <a href="registro.html">Registrarse</a>
+        <a href="login.html">Iniciar Sesión</a>
+    </div>
+</div>
+
+<?php
+/*
 function authenticateUser($username, $password) {
     $conn = Database::getInstance();
     $stmt = $conn->prepare("SELECT id, password FROM users WHERE username = :username");
@@ -31,3 +42,4 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         // Authentication failed: handle the error, e.g., show an error message
         $error = 'Invalid credentials. Please try again.';
         // Include the login view here to sho
+*/
