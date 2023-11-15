@@ -1,5 +1,5 @@
 <?php
-require_once 'connectaDB.php'; // Adjust the path as necessary
+require_once 'DBconnect.php'; // Adjust the path as necessary
 
 // Attempt to connect to the database
 try {

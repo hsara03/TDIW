@@ -11,7 +11,7 @@
 
 <main>
     <!-- Formulario de Registro -->
-    <form action="#" method="post">
+    <form action="../controller/register.php" method="post">
         <label for="name">Nombre:</label>
         <input type="text" id="name" name="name" pattern="[A-Za-z\s]+" required>
 
@@ -33,4 +33,10 @@
         <input type="submit" value="Registrarse">
     </form>
 </main>
-...
+
+<!-- footer -->
+<?php include __DIR__."../../../controller/footer.php"; ?>
+
+<script src="../JS/index.js"></script>
+</body>
+</html>

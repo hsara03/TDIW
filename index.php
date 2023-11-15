@@ -11,8 +11,8 @@ switch ($accio) {
     case 'llistar-categories':
         include __DIR__ . '/controller/llistar_categories.php';
         break;
-    case 'login':
-        include __DIR__ . '/controller/login.php';
+    case 'register':
+        include __DIR__ . '/view/resources/resource_register.php';
         break;
     case 'category':
         require __DIR__."/view/resources/resource_category.php";

@@ -1,15 +1,24 @@
 <?php
 
-//Registrar un nuevo usuario
-function registerUser($conn, $username, $password) {
-    $passwordHash = password_hash($password, PASSWORD_DEFAULT);
-    $stmt = $conn->prepare("INSERT INTO users (username, password) VALUES (?, ?)");
-    $stmt->execute([$username, $passwordHash]);
-}
+include __DIR__."view/login.php";
 
-//Verificar el Usuario al Iniciar Sesión  
-function getUserByUsername($conn, $username) {
-    $stmt = $conn->prepare("SELECT * FROM users WHERE username = ?");
-    $stmt->execute([$username]);
-    return $stmt->fetch(PDO::FETCH_ASSOC);
+
+function registerUser($conn, $name, $email, $password, $address_line1, $address_line2, $address_city, $number_string) {
+    // Hashing del password antes de guardarlo en la base de datos
+    $passwordHash = password_hash($password, PASSWORD_DEFAULT);
+
+    // Preparar la consulta SQL para evitar inyecciones SQL
+    $query = 'INSERT INTO "user" (name, email, secret, address_line1, address_line2, address_city, number_string) VALUES ($1, $2, $3, $4, $5, $6, $7)';
+
+    // Preparar la consulta
+    pg_query_params($conn, $query, [
+        $name,
+        $email,
+        $passwordHash,
+        $address_line1,
+        $address_line2,
+        $address_city,
+        $number_string
+    ]);
 }
+?>

@@ -1,6 +1,6 @@
 <?php
 
-require_once __DIR__."/../model/connectaDB.php";
+require_once __DIR__ . "/../model/DBconnect.php";
 require_once __DIR__."/../model/categories.php";
 
 $conn = getConn();
