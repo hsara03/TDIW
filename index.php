@@ -22,9 +22,14 @@ switch ($accio) {
         session_destroy();
         header('Location: index.php');
         break;
+    case 'login':
+        include __DIR__ . '/view/resources/resource_login.php';
+        break;
     default:
        require __DIR__."/view/resources/resource_main.php";
        break;
 }
 
 ?>
+
+

@@ -32,6 +32,6 @@
     <!-- footer -->
     <?php include __DIR__."../../../controller/footer.php"; ?>
 
-    <script src="/JS/index.js"></script>
+
 </body>
 </html>
