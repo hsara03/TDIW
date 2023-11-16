@@ -8,14 +8,19 @@ $accio = $_GET['accio'] ?? NULL;
 
 
 switch ($accio) {
-    case 'llistar-categories':
-        include __DIR__ . '/controller/llistar_categories.php';
-        break;
     case 'register':
         include __DIR__ . '/view/resources/resource_register.php';
         break;
     case 'category':
         require __DIR__."/view/resources/resource_category.php";
+        break;
+    case 'product':
+        $_SESSION = array();
+        require __DIR__."/view/resources/resource_product.php";
+        break;
+    case 'product_list':
+        $_SESSION = array();
+        require __DIR__."/view/resources/resource_products.php";
         break;
     case 'logout':
         $_SESSION = array();

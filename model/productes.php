@@ -1,8 +1,8 @@
 <?php
 function getProductById($conn, $productId) {
-    $stmt = pg_query_params($conn, "SELECT * FROM product WHERE id =?", [$productId]);
-    $product = pg_fetch_row($stmt);
-    return $product;
+    $stmt = pg_query_params($conn, "SELECT * FROM product WHERE id = $1", [$productId]);
+    $productss = pg_fetch_assoc($stmt);
+    return $productss;
 }
 
 function getProductsByCategory($conn, $categoryId) {

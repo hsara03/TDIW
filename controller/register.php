@@ -35,9 +35,9 @@ try {
         print_r($filters);
         registerUser($conn, $name, $email, $password, $address1, $address2, $city, $postal_code); // Assuming $number_string is not provided in your form.
     }
-    // header("Location: /?action=register&success=true");
+    header("Location: /?accio=register&success=true");
 } catch (Exception $err){
-    // header("Location: /?action=register&error=".$err->getMessage());
+    header("Location: /?accio=register&error=".$err->getMessage());
 }
 
 include_once __DIR__."/../view/register.php";

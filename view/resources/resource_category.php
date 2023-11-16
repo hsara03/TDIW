@@ -20,7 +20,9 @@
 <?php include __DIR__."../../../controller/categories.php"; ?>
 
 <!-- productes -->
-<?php include __DIR__."../../../controller/category_products.php"; ?>
+<main>
+    <?php include __DIR__."../../../controller/category_products.php"; ?>
+</main>
 
 <!-- footer -->
 <?php include __DIR__."../../../controller/footer.php"; ?>

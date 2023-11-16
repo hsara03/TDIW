@@ -5,6 +5,7 @@
     <title>Telescopios</title>
     <link rel="stylesheet" href="/css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="/JS/index.js"></script>
 </head>
 <body>
     <!-- navigation -->
@@ -25,9 +26,14 @@
             <h1>Bienvenido a Nuestra Tienda de Telescopios</h1>
             <p>Explora el universo desde la comodidad de tu hogar. Nuestra tienda online ofrece una amplia variedad de telescopios para todos los niveles, desde principiantes hasta profesionales. Sumérgete en las estrellas con nosotros.</p>
         </div>
-    </main>
 
-    <?php include __DIR__."../../../controller/products.php"; ?>
+        <a onclick="showProductList()">
+            <button>
+                Ver lista de productos
+            </button>
+        </a>
+
+    </main>
 
     <!-- footer -->
     <?php include __DIR__."../../../controller/footer.php"; ?>

@@ -3,12 +3,15 @@
 session_start();
 
 ?>
-<div class="right-section">
-    <a href="#" class="logo"><img src="../Image/logo.png" alt="Logo"></a>
-    <div class="auth-links">
-        <a href="registro.html">Registrarse</a>
-        <a href="login.html">Iniciar Sesión</a>
-    </div>
+<div class="flex-element">
+    <a href="/" class="logo"><img src="../Image/logo.png" alt="Logo"></a>
+    <a onclick="toggleAccount()">Tu cuenta</a>
+</div>
+
+<div class="auth-links hidden">
+    <a href="/?accio=register">Registrarse</a>
+    <a href="/?accio=login">Iniciar Sesión</a>
+    <a onclick="toggleAccount()">X</a>
 </div>
 
 <?php
