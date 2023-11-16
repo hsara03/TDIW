@@ -1,10 +1,5 @@
 function toggleDisplay(){
-    const rectangle = document.getElementById('rectangle');
-    if (rectangle.style.transform) {
-        rectangle.style.transform=null
-    } else {
-        rectangle.style.transform="translateX(-300px)"
-    }
+    $("#rectangle").toggle()
 }
 
 async function displayProduct(productId){
@@ -20,12 +15,7 @@ async function showProductList(){
 }
 
 function toggleAccount(){
-    const element = document.querySelector(".auth-links")
-    if(element.classList.contains("hidden")){
-        $( ".auth-links" ).removeClass( "hidden" );
-    } else {
-        $( ".auth-links" ).addClass( "hidden" );
-    }
+    $(".auth-links").toggleClass("hidden")
 }
 
 async function showCategory(category){

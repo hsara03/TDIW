@@ -11,7 +11,7 @@ function registerUser($conn, $name, $email, $password, $address_line1, $address_
     $query = 'INSERT INTO "user" (name, email, secret, address_line1, address_line2, address_city, number_string) VALUES ($1, $2, $3, $4, $5, $6, $7)';
 
     // Preparar la consulta
-    pg_query_params($conn, $query, [
+    $result = pg_query_params($conn, $query, [
         $name,
         $email,
         $passwordHash,
@@ -20,5 +20,7 @@ function registerUser($conn, $name, $email, $password, $address_line1, $address_
         $address_city,
         $number_string
     ]);
+
+    if($result==false) throw new Exception("user already exists");
 }
 ?>
